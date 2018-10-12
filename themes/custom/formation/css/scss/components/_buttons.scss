@@ -1,0 +1,23 @@
+/*Buttons*/
+#myBtnContainer{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding-bottom:20px;
+    .btn {
+      border: none;
+      outline: none;
+      padding: 12px 16px;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #ddd;
+    }
+
+    .btn.active {
+      background-color: #666;
+      color: white;
+    }
+}

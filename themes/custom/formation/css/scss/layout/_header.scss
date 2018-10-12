@@ -1,0 +1,18 @@
+/*Header*/
+header{
+    
+}
+
+#block-formation-branding{
+    display:flex;
+    justify-content:center;
+    padding:2em 1em 1em 1em;
+    a{
+        img{
+            width:10em;
+        }
+    }
+    a:nth-child(3){
+        display:none;
+    }
+}

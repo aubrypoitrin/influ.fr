@@ -1,0 +1,48 @@
+/*Navigation*/
+#block-formation-main-menu {
+    ul {
+    margin:0px;
+    padding:0px;
+    background:tomato;
+    list-style:none;
+        a{
+        padding: 1em;
+        display:block;
+        text-align:center;
+        text-decoration:none;
+        }
+    display:flex; //définir l'affichage en mode flexbox
+    flex-direction:row;//enfants de l'élément courant affichés en ligne
+    justify-content:center;//aligner les enfants au centre du conteneur  
+        @media(max-width:450px){
+            flex-flow:column wrap;//raccourcie de flex-direction et flex-wrap, on affiche les enfants par column et on autorise le retour à la ligne
+        }
+        li:nth-child(3){
+            position:relative;//positionnement de l'élément relatif dans le but de pouvoir aligner l sous menu en fonction de son parent.
+            ul{//comportement par défaut de notre sous-menu
+                display:none;//caché
+                flex-flow:column wrap;//aligné en colonne
+                min-width:100px;//taille mini 100px;
+                position:absolute;
+                background:dodgerblue;
+                a{
+                    text-align:left;//on aligne le texte à gauche pour une question d'estthétique
+                    color:white;
+                    @media(max-width:450px){
+                        text-align:center;
+                    }
+                }
+                @media(max-width:450px){
+                    position:static;//déclinaison responsive
+                }
+                .is-active{
+                    display:flex!important;
+                    text-align:center;
+                }
+            }
+        }
+        li:nth-child(3):hover > ul{
+            display:flex;//si curseur sur l'élément, on affiche le sous-menu en mode flexbox
+        }
+    }
+}

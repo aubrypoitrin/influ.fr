@@ -1,0 +1,7 @@
+<?php
+
+function formation_preprocess_node($variables) {
+    if ($variables['node']->nid->value == 4){
+        $variables['attached']['library'][] = 'formation/node-css'; //ajout d'une librairie pour les page de type node
+    }
+}
